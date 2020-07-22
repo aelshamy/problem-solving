@@ -1,3 +1,4 @@
+// O(n) time complexity
 function memoize(fn) {
   const cache = {};
   return function (...args) {
