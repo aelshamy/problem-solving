@@ -4,6 +4,8 @@ used in a string. Vowels are the characters 'a', 'e'
 
 ## Examples
 
-- vowels('Hi There!') --> 3
-- vowels('Why do you ask?') --> 4
-- vowels('Why?') --> 0
+```js
+vowels('Hi There!') => 3;
+vowels('Why do you ask?') => 4;
+vowels('Why?') => 0;
+```

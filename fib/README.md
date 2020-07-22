@@ -7,6 +7,8 @@ Example:
 
 ## Examples
 
-- fib(4) === 3
-- fib(5) === 5
-- fib(8) === 21
+```js
+fib(4) => 3
+fib(5) => 5
+fib(8) => 21
+```
