@@ -112,6 +112,36 @@ class LinkedList {
 
     return midPoint;
   }
+  isCircular() {
+    let first = this.head;
+    let second = this.head;
+
+    while (second.next && second.next.next) {
+      first = first.next;
+      second = second.next.next;
+      if (first === second) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  getFromLast(n) {
+    let first = this.head;
+    let second = this.head;
+
+    while (n > 0) {
+      second = second.next;
+      n--;
+    }
+
+    while (second.next) {
+      second = second.next;
+      first = first.next;
+    }
+    return first;
+  }
 
   *[Symbol.iterator]() {
     let node = this.head;
@@ -153,6 +183,9 @@ for (let item of linkedList) {
 }
 console.log('================= midPoint =========================');
 console.log(linkedList.getMidPoint());
+console.log(linkedList.isCircular());
+console.log('================= getFromLast =========================');
+console.log(linkedList.getFromLast(2));
 // linkedList.removeFirst();
 // linkedList.clear();
 // console.log(linkedList.size());
