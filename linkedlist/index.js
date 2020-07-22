@@ -101,6 +101,18 @@ class LinkedList {
     }
   }
 
+  getMidPoint() {
+    let midPoint = this.head;
+    let pointer = this.head;
+
+    while (pointer.next && pointer.next.next) {
+      midPoint = midPoint.next;
+      pointer = pointer.next.next;
+    }
+
+    return midPoint;
+  }
+
   *[Symbol.iterator]() {
     let node = this.head;
     while (node) {
@@ -139,6 +151,8 @@ console.log('================= For Of=========================');
 for (let item of linkedList) {
   console.log(item);
 }
+console.log('================= midPoint =========================');
+console.log(linkedList.getMidPoint());
 // linkedList.removeFirst();
 // linkedList.clear();
 // console.log(linkedList.size());
