@@ -8,7 +8,7 @@ class Queue {
     this.#data.unshift(record);
   }
   remove() {
-    return this.#data.pop() || 'queue is empty';
+    return this.#data.pop() || 'Queue is empty';
   }
   peek() {
     if (!this.#data.length) {
