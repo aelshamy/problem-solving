@@ -112,6 +112,7 @@ class LinkedList {
 
     return midPoint;
   }
+
   isCircular() {
     let first = this.head;
     let second = this.head;

@@ -10,10 +10,10 @@ class Stack {
     return this.#data.pop();
   }
   peek() {
-    if (!this.#data.length) {
-      return;
-    }
     return this.#data[this.#data.length - 1];
+  }
+  empty() {
+    return this.#data.length > 0;
   }
 }
 
