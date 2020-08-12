@@ -1,4 +1,4 @@
-class Node {
+class BTNode {
   constructor(data) {
     this.data = data;
     this.left = null;
@@ -9,11 +9,11 @@ class Node {
     if (data < this.data && this.left) {
       this.left.insert(data);
     } else if (data < this.data) {
-      this.left = new Node(data);
+      this.left = new BTNode(data);
     } else if (data > this.data && this.right) {
       this.right.insert(data);
     } else if (data > this.data) {
-      this.left = new Node(data);
+      this.left = new BTNode(data);
     }
   }
   contains(data) {
@@ -28,3 +28,5 @@ class Node {
     return null;
   }
 }
+
+module.exports = BTNode;

@@ -1,4 +1,4 @@
-class Node {
+class TreeNode {
   data;
   children;
 
@@ -8,7 +8,7 @@ class Node {
   }
 
   add(data) {
-    this.children.push(new Node(data));
+    this.children.push(new TreeNode(data));
   }
   remove(data) {
     this.children = this.children.filter((item) => item.data !== data);
@@ -57,3 +57,5 @@ class Tree {
     return widths;
   }
 }
+
+module.exports = { TreeNode, Tree };
